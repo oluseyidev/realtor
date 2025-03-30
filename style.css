@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('images/back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    
+    
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 5vw 4vw;
+}
+
+.hero h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem); /* Dynamic scaling */
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.hero button {
+    margin-top: 15px;
+    padding: 12px 24px;
+    background: white;
+    color: #007bff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.hero button:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 5vw;
+    transition: all 0.3s ease-in-out;
+}
+
+.features:hover {
+    transform: scale(1.02); /* Slightly enlarges the entire section on hover */
+}
+
+.feature {
+    background: rgb(218, 228, 247);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px); /* Moves the card slightly up */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow */
+    background: rgb(200, 220, 247); /* Slight color change */
+}
+
+.feature img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* CTA Section */
+.cta {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cta button {
+    margin-top: 15px;
+    padding: 12px 24px;
+    background: white;
+    color: #007bff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta button:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    
+    background: #f8f8f8;
+}
+
+.ct, .right {
+    background-color: aliceblue;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+    .features {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .feature {
+        flex: 1 1 calc(33.333% - 20px); /* Three-column layout */
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 10vw 5vw;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero button {
+        font-size: 16px;
+    }
+}
